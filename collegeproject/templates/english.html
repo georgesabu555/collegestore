@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>English Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5deb3; /* Wheat */
+        }
+
+        header {
+            background-color: #cd853f; /* Peru */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .department-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .department-info h2 {
+            color: #cd853f; /* Peru */
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Department Of English</h1>
+    </header>
+
+    <div class="container">
+        <img src="{% static 'images/english2.jpg' %}" alt="English Department Image">
+
+        <div class="department-info">
+            <h2>Department Overview</h2>
+            <p>The English Department at Our College provides students with a rich and diverse education in the study of
+                English language and literature. Our faculty members are passionate about language and literature, offering
+                students the opportunity to explore various genres, periods, and cultural contexts. Envisioning the Department
+                as a centre of academic excellence, social responsibility, value based education, professional expertise and
+                research in English language, literature and translation. Through the courses offered, our students get an
+                exposure to how writers and thinkers from across the world and cultures have used various genres of literary
+                expressions to represent the real and the imaginary. The study of English opens up a world of opportunities
+                for them in the country and abroad, side by side with the infusion of principles and ideas of the literary art.
+                They acquire a plethora of skills in textual analysis, critical thinking and creative expression. It empowers
+                them to apply the knowledge gained and skills acquired in a wide variety of professional situations.</p>
+        </div>
+
+        <div class="courses">
+            <h2>Programs Offered</h2>
+            <ul>
+                <li><strong>Bachelor of Arts in English (BA)</strong>: Our BA program covers literature, linguistics, and creative writing, preparing students for careers in writing, teaching, publishing, and more.</li>
+                <li><strong>Master of Arts in English (MA)</strong>: The MA program offers advanced courses in literature and literary theory, allowing students to specialize in areas like Shakespearean studies, postcolonial literature, and modernist literature.</li>
+                <li><strong>Ph.D. in English</strong>: The Ph.D. program enables students to engage in scholarly research, contributing to the field of English studies through in-depth analysis and critical thinking.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

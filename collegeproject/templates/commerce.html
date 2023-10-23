@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Commerce Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .department-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .department-info h2 {
+            color: #35424a;
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Department Of Commerce</h1>
+    </header>
+
+    <div class="container">
+        <img src="{% static 'images/commerce1.jpg' %}" alt="Commerce Department Image">
+
+        <div class="department-info">
+            <h2>Department Overview</h2>
+            <p>The Commerce Department offers a wide range of programs designed to prepare students for successful careers in the business world.
+                Our dedicated faculty and comprehensive curriculum provide students with the knowledge and skills needed to excel in various fields of commerce.
+            The Department of Commerce was established in the year 2015 and was upgraded with a post graduate programme with specialization in Finance in 2017.
+                The Department is an approved research center of ABC university with five research supervisors and 37 research scholars.
+                The department has undertaken several major and minor research projects funded by U.G.C.
+                The Dept. publishes a double-blind peer reviewed half yearly journal “Commerce Spectrum”
+                annotated in the Journal of Economic Literature (JEL), American Economic Association and Indexed in Institute for Studies in Industrial Development (ISID), ICSSR, New Delhi.</p>
+        </div>
+
+        <div class="courses">
+            <h2>Courses Offered</h2>
+            <ul>
+                <li><strong>Bachelor of Business Administration (BBA)</strong>: This program focuses on business administration and management principles, preparing students for leadership roles in the corporate sector.</li>
+                <li><strong>Bachelor of Commerce (BCom)</strong>: The BCom program offers a broad understanding of commerce, accounting, finance, and economics, enabling students to pursue diverse career paths in finance, marketing, and more.</li>
+                <li><strong>Master of Business Administration (MBA)</strong>: Our MBA program provides advanced knowledge in business strategy, organizational behavior, and entrepreneurship, empowering students to lead and innovate in the business world.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Science Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .department-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .department-info h2 {
+            color: #4caf50;
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Department Of Science</h1>
+    </header>
+
+    <div class="container">
+        <img src="{% static 'images/science2.webp' %}" alt="Science Department Image">
+
+        <div class="department-info">
+            <h2>Department Overview</h2>
+            <p>The Science Department at Our College offers a wide array of courses covering various scientific disciplines.
+                Our dedicated faculty and state-of-the-art facilities provide students with hands-on experience and a deep
+                understanding of scientific principles.Togetherness is the special quality of our staff. We all work together
+                to develop overall personality of our students. We strive hard to inculcate high morale and professional standards
+                among our students. We train our students to excel in academics, co-curricular activities, extra curricular
+                activities and to lead a highly disciplined and organised life.To provide excellence in education and an inspiring
+                environment that ignites the young minds. We aim at projecting scientific and technological developments to the
+                society, bring up its students as educated individuals who are adeptly equipped for life and able to apply for
+                privileged graduate studies.</p>
+        </div>
+
+        <div class="courses">
+            <h2>Programs Offered</h2>
+            <ul>
+                <li><strong>Bachelor of Science (BSc)</strong>: Our BSc programs cover a range of subjects including Physics, Chemistry, Biology, Mathematics, and more, preparing students for diverse career paths in scientific research and industry.</li>
+                <li><strong>Master of Science (MSc)</strong>: The MSc programs allow students to specialize in specific scientific disciplines, providing advanced knowledge and research opportunities in areas like Environmental Science, Biotechnology, and Applied Physics.</li>
+                <li><strong>Ph.D. in Science</strong>: The Ph.D. program enables students to conduct groundbreaking research in various scientific fields, contributing to the advancement of knowledge and scientific discovery.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

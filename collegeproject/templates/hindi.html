@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Hindi Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5e6cc; /* Almond */
+        }
+
+        header {
+            background-color: #cc6600; /* Rust Orange */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .department-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .department-info h2 {
+            color: #cc6600; /* Rust Orange */
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Department Of Hindi</h1>
+    </header>
+
+    <div class="container">
+        <img src="{% static 'images/hindi1.jpg' %}" alt="Hindi Department Image">
+
+        <div class="department-info">
+            <h2>Department Overview</h2>
+            <p>The Hindi Department at Our College offers a profound study of the Hindi language, literature, and culture.
+                Students explore the rich heritage of Hindi literature, poetry, and drama, gaining a deep understanding of
+                the language and its artistic expressions. The department emphasizes both classical and modern aspects of
+                Hindi language and literature. The department has a well-stocked library and computer laboratory to provide
+                students with access to all the necessary resources. Additionally, the department offers a certificate course
+                in communicative Hindi, applied grammar, and translation. A communicative Hindi club is formed to enhance the
+                communication skills of students. The Department of Hindi stands out not only for its academic achievements
+                but also for its accomplishments in sports and cultural activities. The presence of a well-equipped computer
+                lab enhances the students’ learning experience. The department has implemented best practices, including the
+                Maitreya Charity Bank and Aksharashree, which contribute to the overall development of students. Currently, the
+                department boasts a team of five experienced faculty members, with one faculty member serving as a research guide
+                to six research scholars.</p>
+        </div>
+
+        <div class="courses">
+            <h2>Programs Offered</h2>
+            <ul>
+                <li><strong>Bachelor of Arts in Hindi (BA)</strong>: Our BA program covers classical and contemporary Hindi literature, linguistics, and cultural studies, preparing students for careers in teaching, journalism, and literary fields.</li>
+                <li><strong>Master of Arts in Hindi (MA)</strong>: The MA program offers advanced courses in Hindi literature, literary criticism, and research methodologies, allowing students to specialize in specific periods and genres of Hindi literature.</li>
+                <li><strong>Ph.D. in Hindi</strong>: The Ph.D. program enables students to conduct in-depth research in Hindi literature, contributing to the preservation and advancement of Hindi language and culture.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

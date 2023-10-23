@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filling Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #c2c2f0;
+            padding: 50px;
+        }
+
+        .form-container {
+            background-color: #b0e57c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: inline-block;
+            width: 150px; /* Set the width of the label as needed */
+            margin-bottom: 10px;
+        }
+        .form-group input {
+            width: 350px; /* Calculate the width of the input box */
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .form-group input[type="radio"] {
+        margin-right: 5px; /* Adjust the margin as needed */
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            display: inline-block;
+            margin-right: 5px;
+        }
+ .btn-submit {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button horizontally */
+}
+                h1 {
+            text-align: center;
+            color: #ffffff; /* Set your desired text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for emphasis */
+            font-family: 'Arial', sans-serif; /* Set your desired font-family */
+            font-size: 36px; /* Set your desired font size */
+            margin-top: 10px; /* Adjust the top margin to position the heading */
+        }
+
+
+    </style>
+</head>
+
+<body>
+<h1 style="text-align:center;">COLLEGE STORE</h1>
+    <div class="container form-container">
+        <form action="{% url 'filling' %}" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+
+
+<!--            <div class="form-group" style="display: flex; align-items: center;">-->
+            <label style="margin-right: 90px;">Gender:</label>
+<!--            </div>-->
+            <input type="radio" id="male" name="gender" value="male" required style="margin-right: 5px;">
+            <label for="male" style="margin-right: 25px;">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female" style="margin-right: 25px;">Female</label>
+            <input type="radio" id="others" name="gender" value="others" required>
+            <label for="others" style="margin-bottom: 20px;">Others</label>
+
+
+
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+            </div>
+            <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            </div>
+            <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required style="width: 62%;height:80px;"></textarea><br>
+            </div>
+            <div class="form-group">
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="commerce">Commerce</option>
+            <option value="science">Science</option>
+            <option value="english">English</option>
+            <option value="malayalam">Malayalam</option>
+            <option value="hindi">Hindi</option>
+            </select><br>
+            </div>
+            <div class="form-group">
+            <label for="course">Courses:</label>
+            <select id="course" name="course" required disabled>
+            <option value="" disabled selected>Select Department First</option>
+            </select><br>
+            </div>
+            <div class="form-group">
+            <label for="purpose">Purpose:</label>
+            <select id="purpose" name="purpose" required>
+            <option value="" disabled selected>Select Purpose</option>
+            <option value="enquiry">For Enquiry</option>
+            <option value="order">Place Order</option>
+            <option value="return">Return</option>
+            <!-- Add more purpose options here -->
+            </select><br>
+            </div>
+        <label style="margin-right: 20px;">Materials Provide:</label>
+        <input type="checkbox" id="notebook" name="materials[]" value="notebook" style="display: inline-block; margin-right: 10px;">
+        <label for="notebook" style="display: inline-block; margin-right: 20px;">Notebook</label>
+        <input type="checkbox" id="pen" name="materials[]" value="pen" style="display: inline-block; margin-right: 10px;">
+        <label for="pen" style="display: inline-block; margin-right: 20px;">Pen</label>
+        <input type="checkbox" id="examPapers" name="materials[]" value="exam_papers" style="display: inline-block; margin-right: 10px; margin-left: 16px;">
+        <label for="examPapers" >Exam Papers</label>
+
+        <div >
+            <input type="checkbox" id="sharpener" name="materials[]" value="sharpener" style="margin-right: 10px; margin-left: 150px;">
+            <label for="sharpener" style="margin-right: 20px;">Sharpener</label>
+            <input type="checkbox" id="eraser" name="materials[]" value="eraser" style="margin-right: 9px; margin-left: 0px;">
+            <label for="eraser" style="margin-right: 20px;">Eraser</label>
+            <input type="checkbox" id="scissors" name="materials[]" value="scissors" style="margin-right: 10px; margin-left: -1px;">
+            <label for="scissors" >Scissors</label>
+        </div>
+            <div >
+            <input type="checkbox" id="electronics" name="materials[]" value="electronics" style="margin-right: 10px; margin-left: 150px;">
+            <label for="electronics" style="margin-right: 20px;">Electronics</label>
+            <input type="checkbox" id="pencil" name="materials[]" value="pencil" style="margin-right: 9px; margin-left: -3px;">
+            <label for="pencil" style="margin-right: 20px;">Pencil</label>
+            <input type="checkbox" id="recordsheets" name="materials[]" value="record_sheets" style="margin-right: 10px; margin-left: 1px;">
+            <label for="scissors" style="margin-bottom: 50px;">Record sheets</label>
+        </div>
+
+
+
+<!--            <div class="form-group">-->
+<!--                <div class="btn-submit"-->
+<!--            <button type="submit">Submit</button>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div style="text-align: center";>
+<button type="submit">Submit</button>
+        </form>
+    </div>
+<script>
+    var departmentSelect = document.getElementById('department');
+    var courseSelect = document.getElementById('course');
+    var coursesByDepartment = {
+        computer_science: ['BSc', 'MSc'],
+        commerce: ['BBA', 'BCom', 'MBA'],
+        science: ['BSc', 'MSc', 'Phd'],
+        english: ['BA', 'MA', 'Phd'],
+        malayalam: ['BA', 'MA'],
+        hindi: ['BA', 'MA']
+    };
+
+    departmentSelect.addEventListener('change', function() {
+        var selectedDepartment = departmentSelect.value.toLowerCase();
+        courseSelect.innerHTML = ''; // Clear existing options
+
+        if (selectedDepartment in coursesByDepartment) {
+            var courses = coursesByDepartment[selectedDepartment];
+            courses.forEach(function(course) {
+                var option = document.createElement('option');
+                option.value = course;
+                option.textContent = course;
+                courseSelect.appendChild(option);
+            });
+            courseSelect.disabled = false; // Enable the course dropdown
+        } else {
+            var defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'No courses available';
+            courseSelect.appendChild(defaultOption);
+            courseSelect.disabled = true; // Disable the course dropdown
+        }
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        {% if success_message %}
+        $(document).ready(function(){
+            // Show a pop-up message with a link to the home page and a "Go Back" option
+            var confirmation = confirm('{{ success_message }}\n\nClick OK to go to the home page.\nClick Cancel to go back to the form page.');
+
+            if (confirmation) {
+                // Redirect to the home page when the user clicks OK
+                window.location.href = "/";
+            } else {
+                // Redirect back to the form page when the user clicks Cancel
+                window.history.back();
+            }
+        });
+    </script>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Malayalam Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffcc66; /* Pastel Orange */
+        }
+
+        header {
+            background-color: #cc6600; /* Rust Orange */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .department-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .department-info h2 {
+            color: #cc6600; /* Rust Orange */
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Department Of Malayalam</h1>
+    </header>
+
+    <div class="container">
+        <img src="{% static 'images/malayalam1.jpg' %}" alt="Malayalam Department Image">
+
+        <div class="department-info">
+            <h2>Department Overview</h2>
+            <p>The Malayalam Department at Our College offers a comprehensive study of the Malayalam language, literature, and culture.
+                Students explore the rich heritage of Malayalam literature, poetry, and drama, gaining a deep understanding of the
+                language and its artistic expressions.  It was started with the avowed purpose of spreading awareness among students
+                about the rich history of Malayalam language which was intrinsically connected to its cultural, traditional and literary
+                practices. The department grew in leaps and bounds under the care and nurture bestowed upon it by eminent teachers who
+                were not only academicians but also writers and thinkers who considered it as their duty to impart their boundless
+                enthusiasm  for Malayalam language to generations of students. The rich tradition set by them continues even today. The
+                department of Malayalam functions like a second home for its students, for  language enthusiasts of the college, and for
+                meritorious students who  aspire to carve a niche for themselves in public life. The department bears testimony to the
+                fact that the growth and   glory of Malayalam language is safe in the hands of aspiring and dedicated teachers and students.</p>
+        </div>
+
+        <div class="courses">
+            <h2>Programs Offered</h2>
+            <ul>
+                <li><strong>Bachelor of Arts in Malayalam (BA)</strong>: Our BA program covers classical and contemporary Malayalam literature, linguistics, and cultural studies, preparing students for careers in teaching, journalism, and literary fields.</li>
+                <li><strong>Master of Arts in Malayalam (MA)</strong>: The MA program offers advanced courses in Malayalam literature, literary criticism, and research methodologies, allowing students to specialize in specific periods and genres of Malayalam literature.</li>
+                <li><strong>Ph.D. in Malayalam</strong>: The Ph.D. program enables students to conduct in-depth research in Malayalam literature, contributing to the preservation and advancement of Malayalam language and culture.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

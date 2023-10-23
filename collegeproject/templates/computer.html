@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Computer Science Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .department-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .department-info h2 {
+            color: #007bff;
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Department Of Computer Science</h1>
+    </header>
+
+    <div class="container">
+        <img src="{% static 'images/computer2.png' %}" alt="Computer Science Department Image">
+
+        <div class="department-info">
+            <h2>Department Overview</h2>
+            <p>The Computer Science Department at Our College provides cutting-edge education and research opportunities for
+                students interested in the field of computer science. Our faculty members are experts in various areas such as
+                artificial intelligence, data science, software engineering, and more. The department provides and supports
+                robust environment for teaching and learning through integrated technology for effectiveness and efficiency.
+                It aims at designing, developing programs and training students to perform tasks related design and management
+                in every field of Information Technology. The main objective of the department is to impart a solid basic
+                knowledge, a sound scientific background and widespread technical application skills to ensure immediate entry
+                into the industry. Considering the fact that the Computer Science Graduates are heavily recruited, the department
+                facilitates its students to achieve their apt career in high technology companies.</p>
+        </div>
+
+        <div class="courses">
+            <h2>Programs Offered</h2>
+            <ul>
+                <li><strong>Bachelor of Science in Computer Science (BSc)</strong>: This program covers fundamental concepts in computer science and programming, preparing students for careers in software development and technology.</li>
+                <li><strong>Master of Science in Computer Science (MSc)</strong>: Our MSc program offers advanced courses in computer science, allowing students to specialize in areas like cybersecurity, machine learning, and computer networks.</li>
+                <li><strong>Ph.D. in Computer Science</strong>: The Ph.D. program enables students to conduct in-depth research in various computer science disciplines, contributing to the advancement of knowledge in the field.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
